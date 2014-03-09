@@ -2,6 +2,7 @@
 'context-menu':
   '.overlayer':
       'JSON pretty print': 'jsonpp:jsonpp'
+      'JSON compact': 'jsonpp:compact'
 
 'menu': [
   {
@@ -10,6 +11,7 @@
       'label': 'jsonpp'
       'submenu': [
         { 'label': 'JSON pretty print (jsonpp)', 'command': 'jsonpp:jsonpp' }
+        { 'label': 'JSON compact', 'command': 'jsonpp:compact' }
       ]
     ]
   }
