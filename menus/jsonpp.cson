@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'JSON pretty print': 'jsonpp:jsonpp'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'jsonpp'
+      'submenu': [
+        { 'label': 'JSON pretty print (jsonpp)', 'command': 'jsonpp:jsonpp' }
+      ]
+    ]
+  }
+]
