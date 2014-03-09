@@ -1,7 +1,7 @@
 {
   "name": "jsonpp",
   "main": "./lib/jsonpp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JSON pretty printer",
   "repository": "https://github.com/swenson/atom-jsonpp",
   "license": "MIT",
