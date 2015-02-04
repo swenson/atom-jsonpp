@@ -1,4 +1,12 @@
 module.exports =
+  config:
+    numberOfSpacesForIndent:
+      title: 'Indent width for pretty print'
+      description: 'The number of spaces used for indent when pretty-printing.'
+      type: 'integer'
+      default: 2
+      minimum: 1
+
   activate: ->
     atom.workspaceView.command "jsonpp:jsonpp", => @jsonpp()
     atom.workspaceView.command "jsonpp:compact", => @compact()
@@ -6,14 +14,15 @@ module.exports =
   jsonpp: ->
     editor = atom.workspace.activePaneItem
     select = editor.getSelection()
+    tabspace = atom.config.get("jsonpp.numberOfSpacesForIndent")
 
     if not select? or not select or select.isEmpty()
       # transform all the text
-      newCode = JSON.stringify(JSON.parse(editor.getText()), null, 2)
+      newCode = JSON.stringify(JSON.parse(editor.getText()), null, tabspace)
       editor.setText(newCode)
     else
       # replace the selection
-      newCode = JSON.stringify(JSON.parse(select.getText()), null, 2)
+      newCode = JSON.stringify(JSON.parse(select.getText()), null, tabspace)
       select.insertText(newCode)
 
   compact: ->
