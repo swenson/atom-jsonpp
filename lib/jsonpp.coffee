@@ -8,8 +8,8 @@ module.exports =
       minimum: 1
 
   activate: ->
-    atom.workspaceView.command "jsonpp:jsonpp", => @jsonpp()
-    atom.workspaceView.command "jsonpp:compact", => @compact()
+    atom.commands.add 'atom-workspace', "jsonpp:jsonpp", => @jsonpp()
+    atom.commands.add 'atom-workspace', "jsonpp:compact", => @compact()
 
   jsonpp: ->
     editor = atom.workspace.activePaneItem
