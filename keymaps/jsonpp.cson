@@ -7,6 +7,6 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.workspace':
+'atom-workspace':
   'ctrl-alt-j': 'jsonpp:jsonpp'
   'ctrl-alt-k': 'jsonpp:compact'
