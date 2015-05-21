@@ -1,8 +1,9 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
-  '.overlayer':
-      'JSON pretty print': 'jsonpp:jsonpp'
-      'JSON compact': 'jsonpp:compact'
+  'atom-workspace': [
+    { 'label': 'JSON pretty print', 'command': 'jsonpp:jsonpp' }
+    { 'label': 'JSON compact', 'command': 'jsonpp:compact' }
+  ]
 
 'menu': [
   {
