@@ -12,8 +12,8 @@ module.exports =
     atom.commands.add 'atom-workspace', "jsonpp:compact", => @compact()
 
   jsonpp: ->
-    editor = atom.workspace.activePaneItem
-    select = editor.getSelection()
+    editor = atom.workspace.getActivePaneItem()
+    select = editor.getLastSelection()
     tabspace = atom.config.get("jsonpp.numberOfSpacesForIndent")
 
     if not select? or not select or select.isEmpty()
