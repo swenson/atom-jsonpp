@@ -26,8 +26,8 @@ module.exports =
       select.insertText(newCode)
 
   compact: ->
-    editor = atom.workspace.activePaneItem
-    select = editor.getSelection()
+    editor = atom.workspace.getActivePaneItem()
+    select = editor.getLastSelection()
 
     if not select? or not select or select.isEmpty()
       # transform all the text
