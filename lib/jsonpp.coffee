@@ -16,11 +16,11 @@ module.exports =
       @errorPanel.destroy()
 
   jsonpp: ->
-    editor = atom.workspace.getActivePaneItem()
-    select = editor.getLastSelection()
-    tabspace = atom.config.get("jsonpp.numberOfSpacesForIndent")
-
     try
+      editor = atom.workspace.getActivePaneItem()
+      select = editor.getLastSelection()
+      tabspace = atom.config.get("jsonpp.numberOfSpacesForIndent")
+
       if not select? or not select or select.isEmpty()
         # transform all the text
         newCode = JSON.stringify(JSON.parse(editor.getText()), null, tabspace)
